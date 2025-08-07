@@ -1,0 +1,59 @@
+name: Publish Artifact Library Core
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - '.github/workflows/bzn-library-core.yml'   
+    branches:
+      - 'main'
+      - 'develop'
+      - 'bugfix/**'
+      - 'hotfix/**'
+      - 'release/**'
+  push:
+    paths:
+      - 'app/**'
+      - '.github/workflows/bzn-library-core.yml'  
+    branches:
+      - 'main'    
+  workflow_dispatch:
+
+jobs:
+  info-environment:
+    name: Identifying the Environment
+    permissions: write-all
+    uses: brazona/bzn-pgc-infra/.github/workflows/identifier.yml@main
+    with:
+      github_base_ref: ${{github.base_ref}}
+      github_event_name: ${{github.event_name }}
+      github_ref_name: ${{github.ref_name}}
+  build:
+    name: Build and Publish Parent Services
+    needs: [info-environment]
+    runs-on: ubuntu-latest
+    permissions: write-all
+    environment:
+      name: ${{needs.info-environment.outputs.environment_name}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          save-always: true
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Set up JDK 24
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '24'
+
+      - name: Publish package
+        run: mvn -f ./app/ clean install package --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB_ACTION }}
+          
