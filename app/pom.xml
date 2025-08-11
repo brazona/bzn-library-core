@@ -11,9 +11,9 @@
 	</parent>
 	<groupId>br.brazona</groupId>
 	<artifactId>bzn-library-core</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>2.0.1-SNAPSHOT</version>
 	<name>bzn-library-core</name>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 	<description>Projeto destinado para desenvolvimento das bibliotecas javas
 		utlizadas em todos os sistema, o objeti é destinar um repositório que
 		disponibilizar pacotes prontos para utilização nos projetos</description>
