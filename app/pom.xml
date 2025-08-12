@@ -83,16 +83,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.6.3</version>
 				<configuration>
 					<debug>true</debug>
 					<sourcepath>${basedir}/src/main/java</sourcepath>
+					<outputDirectory>${project.build.directory}/javadoc</outputDirectory>
 				</configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
+						<phase>package</phase>
 						<goals>
-							<goal>jar</goal>
+							<goal>aggregate</goal>
 						</goals>
 					</execution>
 				</executions>
