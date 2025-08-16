@@ -34,6 +34,7 @@
 		<java.version>24</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<maven.javadoc.release>${java.version}</maven.javadoc.release>
 		<spring-cloud.version>2024.0.1</spring-cloud.version>
 	</properties>
 	<dependencies>
@@ -60,6 +61,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.source}</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
@@ -80,21 +83,22 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<debug>true</debug>
-					<sourcepath>${basedir}/src/main/java</sourcepath>
-					<outputDirectory>${project.build.directory}/javadoc</outputDirectory>
-				</configuration>
+				<version>3.7.0</version> <!-- Use the latest stable version -->
 				<executions>
 					<execution>
-						<id>attach-javadocs</id>
+						<id>javadoc-jar</id>
 						<phase>package</phase>
 						<goals>
-							<goal>aggregate</goal>
+							<goal>jar</goal>
 						</goals>
+						<configuration>
+							<reportOutputDirectory>
+								${project.build.directory}/javadoc-output</reportOutputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
