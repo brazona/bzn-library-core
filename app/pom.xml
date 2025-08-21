@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.brazona</groupId>
 	<artifactId>bzn-library-core</artifactId>
-	<version>3.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>bzn-library-core</name>
 	<packaging>jar</packaging>
 	<description>Projeto destinado para desenvolvimento das bibliotecas javas
@@ -30,7 +30,15 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.38</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
