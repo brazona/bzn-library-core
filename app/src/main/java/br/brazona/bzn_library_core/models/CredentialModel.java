@@ -7,8 +7,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Represents a credential model in the BZN library core. This class is used to
- * define the structure and behavior of credentials within the application.
+ * CredentialModel
+ * 
+ * @author Brazona
+ * @since 1.0
  */
 
 @Getter
@@ -17,12 +19,28 @@ import lombok.Setter;
 @Component
 public class CredentialModel {
 
-	/**
-	 * The unique identifier for the credential.
-	 */
+	/** The username associated with the credential. */
 	private String username;
-	/**
-	 * The password associated with the credential.
-	 */
+	/** The password associated with the credential. */
 	private String password;
+	
+	/**
+	 * Default constructor
+	 */
+	public CredentialModel() {
+		super();
+		
+	}
+
+	/**
+	 * Constructor with parameters
+	 * 
+	 * @param username The username associated with the credential.
+	 * @param password The password associated with the credential.
+	 */
+	public CredentialModel(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
 }

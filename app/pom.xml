@@ -26,7 +26,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.38</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -35,6 +34,8 @@
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>1.18.38</version>
+				<optional>true</optional>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

@@ -8,19 +8,41 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Represents a role model in the BZN library core. This class is used to define
- * the structure and behavior of roles within the application.
+ * RoleModel
+ * 
+ * @author Brazona
+ * @since 1.0
  */
+
 @Getter
 @Setter
 @Builder
 @Component
 public class RoleModel {
 
-	/**
-	 * The unique identifier for the role.
-	 */
+	/** Name of the role */
 	private RoleEnum name;
-	
+	/** Description of the role */
 	private String description;
+	
+	/**
+	 * Default constructor
+	 */
+	public RoleModel() {
+		super();
+		
+	}
+	
+	/**
+	 * Constructor with parameters
+	 * 
+	 * @param name        name of the role
+	 * @param description description of the role
+	 */
+	public RoleModel(RoleEnum name, String description) {
+		super();
+		this.name = name;
+		this.description = description;
+		
+	}
 }
