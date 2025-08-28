@@ -18,11 +18,7 @@
 		utlizadas em todos os sistema, o objeti é destinar um repositório que
 		disponibilizar pacotes prontos para utilização nos projetos</description>
 
-	<properties>
-		<maven.compiler.release>24</maven.compiler.release>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,7 +27,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.36</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -40,7 +35,7 @@
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
-				<version>1.18.36</version>
+				<version>1.18.38</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>
