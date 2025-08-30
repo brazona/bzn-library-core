@@ -16,7 +16,13 @@
 	<packaging>jar</packaging>
 	<description>Projeto destinado para desenvolvimento das bibliotecas javas
 		utlizadas em todos os sistema, o objeti é destinar um repositório que
-		disponibilizar pacotes prontos para utilização nos projetos</description>
+		disponibilizar pacotes prontos para utilização nos projetos
+	</description>
+	<properties>
+		<maven.compiler.release>24</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -33,8 +39,10 @@
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
-				<version>1.18.38</version>
+				<version>1.18.16</version>
+				<scope>provided</scope>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<distributionManagement>
@@ -44,4 +52,12 @@
 			<url>https://maven.pkg.github.com/brazona/bzn-library-core</url>
 		</repository>
 	</distributionManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
