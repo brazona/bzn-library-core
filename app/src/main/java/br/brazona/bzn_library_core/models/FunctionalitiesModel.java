@@ -4,9 +4,7 @@ package br.brazona.bzn_library_core.models;
 import org.springframework.stereotype.Component;
 
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+
 
 /**
  * FunctionalitiesModel
@@ -15,9 +13,7 @@ import lombok.Setter;
  * @since 1.0
  */
 
-@Getter
-@Setter
-@Builder
+
 @Component
 public class FunctionalitiesModel {
 
@@ -63,4 +59,55 @@ public class FunctionalitiesModel {
 		this.product_code = product_code;
 		
 	}
+
+	// Getters and Setters
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public String getProduct_code() {
+		return product_code;
+	}
+
+	public void setProduct_code(String product_code) {
+		this.product_code = product_code;
+	}
+	
+	
 }

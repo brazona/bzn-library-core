@@ -2,9 +2,7 @@ package br.brazona.bzn_library_core.models;
 
 import org.springframework.stereotype.Component;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+
 
 /**
  * ErrorModel
@@ -13,9 +11,7 @@ import lombok.Setter;
  * @since 1.0
  */
 
-@Getter
-@Setter
-@Builder
+
 @Component
 public class ErrorModel {
 	/** Error code. */
@@ -50,5 +46,38 @@ public class ErrorModel {
 		this.dateProcessed = dateProcessed;
 		this.details = details;
 	}
+	// Getters and Setters
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getDateProcessed() {
+		return dateProcessed;
+	}
+
+	public void setDateProcessed(String dateProcessed) {
+		this.dateProcessed = dateProcessed;
+	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
+	}
+	
 	
 }
