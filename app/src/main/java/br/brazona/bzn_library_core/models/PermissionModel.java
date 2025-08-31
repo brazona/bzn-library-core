@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import br.brazona.bzn_library_core.enuns.FunctionalityActionsEnum;
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * PermissionModel
@@ -14,7 +16,9 @@ import br.brazona.bzn_library_core.enuns.FunctionalityActionsEnum;
  * @since 1.0
  */
 
-
+@Getter
+@Setter
+@Builder
 @Component
 public class PermissionModel {
 
@@ -48,31 +52,4 @@ public class PermissionModel {
 		this.functionality_actions = functionality_actions;
 		
 	}
-
-	// Getters and Setters
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public FunctionalitiesModel getFunctionality() {
-		return functionality;
-	}
-
-	public void setFunctionality(FunctionalitiesModel functionality) {
-		this.functionality = functionality;
-	}
-
-	public List<FunctionalityActionsEnum> getFunctionality_actions() {
-		return functionality_actions;
-	}
-
-	public void setFunctionality_actions(List<FunctionalityActionsEnum> functionality_actions) {
-		this.functionality_actions = functionality_actions;
-	}
-	
-	
 }

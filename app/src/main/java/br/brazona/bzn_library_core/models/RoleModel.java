@@ -3,7 +3,9 @@ package br.brazona.bzn_library_core.models;
 import org.springframework.stereotype.Component;
 
 import br.brazona.bzn_library_core.enuns.RoleEnum;
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * RoleModel
@@ -12,7 +14,9 @@ import br.brazona.bzn_library_core.enuns.RoleEnum;
  * @since 1.0
  */
 
-
+@Getter
+@Setter
+@Builder
 @Component
 public class RoleModel {
 
@@ -41,23 +45,4 @@ public class RoleModel {
 		this.description = description;
 		
 	}
-
-	// Getters and Setters
-	public RoleEnum getName() {
-		return name;
-	}
-
-	public void setName(RoleEnum name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	
 }

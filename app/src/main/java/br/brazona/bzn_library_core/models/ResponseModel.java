@@ -3,8 +3,8 @@ package br.brazona.bzn_library_core.models;
 import org.springframework.stereotype.Component;
 
 import lombok.Builder;
-
-
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * ResponseModel
@@ -13,6 +13,8 @@ import lombok.Builder;
  * @since 1.0
  */
 
+@Getter
+@Setter
 @Builder
 @Component
 public class ResponseModel {
@@ -46,31 +48,5 @@ public class ResponseModel {
 		this.dateProcessed = dateProcessed;
 		
 	}
-
-	// Getters and Setters
-	public Integer getCode() {
-		return code;
-	}
-
-	public void setCode(Integer code) {
-		this.code = code;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public String getDateProcessed() {
-		return dateProcessed;
-	}
-
-	public void setDateProcessed(String dateProcessed) {
-		this.dateProcessed = dateProcessed;
-	}
-	
 	
 }

@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * InstitutionModel
@@ -14,7 +16,9 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 
-
+@Getter
+@Setter
+@Builder
 @Component
 public class InstitutionModel {
 
@@ -59,54 +63,4 @@ public class InstitutionModel {
 		this.owners = owners;
 		
 	}
-    // Getters and Setters
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName_social() {
-		return name_social;
-	}
-
-	public void setName_social(String name_social) {
-		this.name_social = name_social;
-	}
-
-	public String getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public AddressModel getAddress() {
-		return address;
-	}
-
-	public void setAddress(AddressModel address) {
-		this.address = address;
-	}
-
-	public ContactModel getContacts() {
-		return contacts;
-	}
-
-	public void setContacts(ContactModel contacts) {
-		this.contacts = contacts;
-	}
-
-	public List<PersonModel> getOwners() {
-		return owners;
-	}
-
-	public void setOwners(List<PersonModel> owners) {
-		this.owners = owners;
-	}
-	
-	
 }

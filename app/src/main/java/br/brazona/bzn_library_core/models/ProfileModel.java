@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * ProfileModel
@@ -14,7 +16,9 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 
-
+@Getter
+@Setter
+@Builder
 @Component
 public class ProfileModel {
 
@@ -51,39 +55,4 @@ public class ProfileModel {
 		this.permissions = permissions;
 		this.institution = institution;
 	}
-
-	// Getters and Setters
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public List<PermissionModel> getPermissions() {
-		return permissions;
-	}
-
-	public void setPermissions(List<PermissionModel> permissions) {
-		this.permissions = permissions;
-	}
-
-	public InstitutionModel getInstitution() {
-		return institution;
-	}
-
-	public void setInstitution(InstitutionModel institution) {
-		this.institution = institution;
-	}
-	
-	
 }

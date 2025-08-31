@@ -2,7 +2,9 @@ package br.brazona.bzn_library_core.models;
 
 import org.springframework.stereotype.Component;
 
-
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * CredentialModel
@@ -11,7 +13,9 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 
-
+@Getter
+@Setter
+@Builder
 @Component
 public class CredentialModel {
 
@@ -39,25 +43,4 @@ public class CredentialModel {
 		this.username = username;
 		this.password = password;
 	}
-
-	// Getters and Setters 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
-	
-	
-	
 }
