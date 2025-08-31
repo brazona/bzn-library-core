@@ -2,6 +2,8 @@ package br.brazona.bzn_library_core.models;
 
 import org.springframework.stereotype.Component;
 
+import lombok.Builder;
+
 
 
 /**
@@ -11,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 
-
+@Builder
 @Component
 public class ResponseModel {
 
