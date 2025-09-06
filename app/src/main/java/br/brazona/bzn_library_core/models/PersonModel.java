@@ -24,6 +24,8 @@ import lombok.Setter;
 @Component
 public class PersonModel {
 
+	/** Code of the person */
+	private String person_code;
 	/** Name of the person */
 	private String name;
 	/** Social name of the person */
@@ -58,7 +60,7 @@ public class PersonModel {
      * @param addresses addresses associated with person.
      * @param contacts contacts associated with person.
      */
-         public PersonModel(String name, String name_social, String document, GenderEnum gender, String username, List<AddressModel> addresses, ContactModel contacts) {
+         public PersonModel(String person_code, String name, String name_social, String document, GenderEnum gender, String username, List<AddressModel> addresses, ContactModel contacts) {
              super();
              this.name = name;
              this.name_social = name_social;
@@ -67,6 +69,7 @@ public class PersonModel {
              this.username = username;
              this.addresses = addresses;
              this.contacts = contacts;
+             this.person_code = person_code;
              
             	 
          } 		 
