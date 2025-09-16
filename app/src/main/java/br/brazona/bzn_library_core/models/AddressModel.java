@@ -39,8 +39,8 @@ public class AddressModel {
 	private String country;
 	/** zip code of the address */
 	private String zipCode;
-	/** username of the address */
-	private String username;
+	/** person_code of the address */
+	private String person_code;
 	
 	
 	/**
@@ -65,7 +65,7 @@ public class AddressModel {
 	 * @param username username of the address
 	 */
 	public AddressModel(String name, String street, String number, String complement, String neighborhood,
-            String city, String state, String country, String zipCode, String username) {	
+            String city, String state, String country, String zipCode, String person_code) {	
 		        super();
 		        this.name = name;
 		        this.street = street;
@@ -76,7 +76,7 @@ public class AddressModel {
 		        this.state = state;
 		        this.country = country;
 		        this.zipCode = zipCode;
-		        this.username = username;
+		        this.person_code = person_code;
 		        
 	}
 	
