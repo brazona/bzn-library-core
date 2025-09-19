@@ -21,8 +21,6 @@ import lombok.Setter;
 @Component
 public class FunctionalitiesModel {
 
-	/** Id of the functionality */
-	private String id;
 	/** Name of the functionality */
 	private String name;
 	/** Description of the functionality */
@@ -44,18 +42,16 @@ public class FunctionalitiesModel {
 	
 	/**
 	 * Constructor with parameters
-	 * 
-	 * @param id           id of the functionality
+	 *
 	 * @param name         name of the functionality
 	 * @param description  description of the functionality
 	 * @param icon         icon of the functionality
 	 * @param path         path of the functionality
 	 * @param product_code product code of the functionality
 	 */
-	public FunctionalitiesModel(String id, String name, String description, String icon, String path,
+	public FunctionalitiesModel(String name, String description, String icon, String path,
             String product_code) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.icon = icon;

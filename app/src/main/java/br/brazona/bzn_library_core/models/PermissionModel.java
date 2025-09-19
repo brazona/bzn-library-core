@@ -22,8 +22,6 @@ import lombok.Setter;
 @Component
 public class PermissionModel {
 
-	/** id of the permission */
-	private String id;
 	/** functionality of the permission */
 	private FunctionalitiesModel functionality;
 	/** actions of the functionality */
@@ -39,15 +37,13 @@ public class PermissionModel {
 	
 	/**
 	 * Constructor with parameters
-	 * 
-	 * @param id                    id of the permission
+	 *
 	 * @param functionality         functionality of the permission
 	 * @param functionality_actions actions of the functionality
 	 */
-	public PermissionModel(String id, FunctionalitiesModel functionality,
+	public PermissionModel(FunctionalitiesModel functionality,
             List<FunctionalityActionsEnum> functionality_actions) {
 		super();
-		this.id = id;
 		this.functionality = functionality;
 		this.functionality_actions = functionality_actions;
 		

@@ -1,7 +1,5 @@
 package br.brazona.bzn_library_core.models;
 
-import java.util.List;
-
 import org.springframework.stereotype.Component;
 
 
@@ -22,14 +20,16 @@ import lombok.Setter;
 @Component
 public class ProfileModel {
 
-	/** Id of the profile */
-	private String id;
 	/** Name of the profile */
 	private String name;
+	/** Description of the profile */
+	private String description;
+	/** Code of the Person */
+	private String profile_code;
 	/** Profile permissions. */
-	private List<PermissionModel> permissions;
-	/** Institution associated with profile. */
-	private InstitutionModel institution;
+	private PermissionModel permissions;
+	/** Code of the Institution */
+	private String institution_code;
 
 
 	/**
@@ -42,17 +42,19 @@ public class ProfileModel {
 	
 	/**
 	 * Constructor with parameters
-	 * 
-	 * @param id          id of the profile
+	 *
 	 * @param name        name of the profile
+	 * @param description description of the profile
+	 * @param profile_code Code unique of the profile
+	 * @param institution_code Code unique of the Institution
 	 * @param permissions profile permissions.
-	 * @param institution institution associated with profile.
 	 */
-	public ProfileModel(String id, String name, List<PermissionModel> permissions, InstitutionModel institution) {
+	public ProfileModel(String name, String description, String profile_code, PermissionModel permissions, String institution_code) {
 		super();
-		this.id = id;
 		this.name = name;
+		this.description = description;
+		this.profile_code = profile_code;
 		this.permissions = permissions;
-		this.institution = institution;
+		this.institution_code = institution_code;
 	}
 }
